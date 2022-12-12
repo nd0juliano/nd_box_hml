@@ -41,9 +41,9 @@ def read_scheduled_tasks():
                 item.status = 'completed'
                 item.soft_delete()
             if item.task == 'sendSMS':
-                send_test_mail()
                 item.status = 'completed'
                 item.soft_delete()
+                check_scheduled_sms_boletos()
     else:
         print('nothing do run')
 
